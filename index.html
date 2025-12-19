@@ -1,7 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadit Munjal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb; 
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-color: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1150px;
+            width: 92%;
+            background: #ffffff;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 70px; 
+            align-items: flex-start;
+            margin: 40px auto;
+        }
+
+        .left-col {
+            flex: 0 0 300px; 
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 200px; 
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .name-under-pic {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            color: var(--text-dark);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .right-col {
+            flex: 1;
+            max-width: 780px; 
+        }
+
+        h1 { 
+            margin-top: 0; 
+            font-size: 2rem; 
+            color: var(--text-dark);
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 10px;
+        }
+
+        p { 
+            line-height: 1.7; 
+            color: var(--text-light); 
+            font-size: 1.05rem; 
+        }
+
+        .resume-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .resume-link:hover { text-decoration: underline; }
+
+        @media (max-width: 992px) {
+            .container { 
+                flex-direction: column; 
+                padding: 30px; 
+                gap: 30px;
+            }
+            .left-col { 
+                flex: none; 
+                width: 100%; 
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+            }
+        }
+
+        .skills-header {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 30px 0 15px 0;
+            color: #1f2937;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2563eb;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .skills-section {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .skills-group {
+            margin-bottom: 15px;
+            text-align: left; 
+        }
+
+        .skills-group h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            background-color: #eff6ff;
+            color: #1e40af;            
+            padding: 4px 12px;
+            border-radius: 50px;    
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid #dbeafe; 
+            white-space: nowrap;
+        }
+
+        .tagline-sidebar {
+            font-size: 0.85rem;      
+            color: #6b7280;          
+            font-weight: 500;
+            margin: -10px 0 20px 0;  
+            line-height: 1.4;
+            max-width: 220px;     
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my GitHub website.</p>
+    <div class="container">
+        <div class="left-col">
+            <img src="aadit_gray.png" alt="Aadit Munjal" class="profile-img">
+            <h2 class="name-under-pic">Aadit Munjal</h2>
+            
+            <p class="tagline-sidebar">AI/ML Research Engineer</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aaditmunjal/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/aaditmunjal" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="resume.pdf" target="_blank" title="View Resume">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+            </div>
+            <h2 class="skills-header">Skills</h2>
+
+        <div class="skills-section">
+            <div class="skills-group">
+                <h3>Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">OCaml</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Rust</span>
+                    <span class="skill-tag">x86 Assembly</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <h3>AI & Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">Deep Learning </span>
+                    <span class="skill-tag">Classical Machine Learning </span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Natural Language Processing</span>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="right-col">
+
+        <h1>About Me</h1>
+
+        <p>
+        I am a Computer Science graduate from the <strong>University of Minnesota – Twin Cities</strong> (GPA: 3.94) specializing in Machine Learning theory and applied Artificial Intelligence. My background is defined by a commitment to technical rigor, moving beyond standard undergraduate curricula to focus on the mathematical and architectural foundations of modern AI.
+        </p>
+
+        <p>
+        My experience at the University of Minnesota reflects a proactive drive to operate at a post-graduate level, featuring a doctoral-track seminar in <em>Linear Algebra for Data Exploration</em> alongside graduate coursework in <em>Computer Vision</em>, <em>Spatial Data Science</em>, and <em>Numerical Analysis</em>. My research projects reflect this advanced focus: I developed <a href="https://github.com/aaditmunjal/VGGNeXt">VGGNeXt</a>, a modernization of the VGG16 architecture that improved Top-1 accuracy while reducing computational costs by 19%. Additionally, I collaborated on a <a href="https://github.com/aaditmunjal/LoRA-Comparative-Study">comparative study of Parameter-Efficient Fine-Tuning (LoRA)</a>, benchmarking it against full-model fine-tuning to validate PEFT as a robust alternative for LLM adaptation.
+        </p>
+
+        <p>
+        My technical versatility is further demonstrated through end-to-end algorithmic implementation. I worked within a team to develop a <a href="https://github.com/aaditmunjal/Semantic-3D-Reconstruction-for-Indoor-AI-Agents">Semantic 3D Reconstruction</a> pipeline from RGB-D sequences, integrating a fine-tuned YOLO11 model and an ICP algorithm implemented from scratch. I also built a <a href="https://github.com/aaditmunjal/Ray-Tracer">Ray Tracer</a> in C, incorporating Blinn-Phong illumination, textures, shadows, and recursively handling reflection and transmission of light. These projects demonstrate my ability to translate complex theoretical concepts into optimized, functional code.
+        </p>
+
+        <p>
+        Complementing my academic background, I spent two summers as an <strong>AI Intern</strong> at <strong>Walgreens</strong>, where I gained practical experience working on a production Interactive Voice Response (IVR) system. My contributions included developing an automated testing framework, optimizing grammar files, and leveraging ML models for time-series forecasting of business metrics. This experience reinforced my technical skills while strengthening my ability to deliver reliable solutions within a professional corporate environment.
+        </p>
+
+        <p>
+        I am currently seeking full-time opportunities starting in February 2026 in <strong>ML/AI Research</strong>, <strong>ML/AI Engineering</strong>, or <strong>Software Engineering</strong> where I can bridge the gap between emerging AI research and high-performance, scalable implementation.
+        </p>
+
+        <a href="resume.pdf" class="resume-link">View Full Resume &rarr;</a>
+        </div>
+    </div>
+
 </body>
 </html>
