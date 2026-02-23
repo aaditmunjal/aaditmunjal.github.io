@@ -176,6 +176,61 @@
             margin-right: auto;
         }
 
+        .contact-section {
+            margin-top: 40px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 420px;
+        }
+
+        .contact-form label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.12);
+        }
+
+        .contact-form button {
+            margin-top: 6px;
+            align-self: flex-start;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.15s ease, transform 0.1s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
     </style>
 </head>
 
@@ -257,6 +312,30 @@
         </p>
 
         <a href="resume.pdf" class="resume-link">View Full Resume &rarr;</a>
+
+        <div class="contact-section">
+            <h1>Contact Me</h1>
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/meelpker"
+                method="POST"
+            >
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="_replyto" required>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
         </div>
     </div>
 
